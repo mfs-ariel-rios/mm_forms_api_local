@@ -1,0 +1,903 @@
+{
+  "steps": "4",
+  "formId": "F0040",
+  "country": "HN",
+  "currentForm": 1,
+  "forms": [
+    {
+      "id": 1,
+      "step": "1",
+      "stageName": "Registro del usuario",
+      "title": "Tu cuenta aparecerá como la de un comercio.",
+      "subtitle": "Podrás indicar información sobre los productos y/o servicios que ofreces y metodos de contacto para que cualquiera pueda interactuar contigo.",
+      "actionsButtons": [
+        {
+          "id": 4,
+          "type": "submit",
+          "name": "Submit",
+          "label": "Continuar",
+          "events": { "id": 5, "onClick": "() => nextStep()" },
+          "validations": [
+            { "id": 5, "variant": "Primary", "fontVariant": "main" }
+          ]
+        }
+      ],
+      "seccion": [
+        {
+          "type": "business_profile",
+          "id": 1,
+          "title": "Onboarding_LB_BuissProfLbl",
+          "subtitle": "Onboarding_LB_PutInData",
+          "editSubtitle": "Onboarding_LB_FormName",
+          "cards": [],
+          "fields": [
+            {
+              "id": 0,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_PublicName" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "text",
+                "name": "public_name",
+                "value": "",
+                "placeholder": "Onboarding_LB_BuissName",
+                "helperText": "",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "id": 1,
+              "data": [
+                { "id": 0, "value": "", "label": "Onboarding_LB_ChooseCat" },
+                {
+                  "id": 1,
+                  "value": "restaurants",
+                  "label": "Onboarding_BTN_Restaurant"
+                },
+                { "id": 2, "value": "super", "label": "Onboarding_BTN_Super" },
+                {
+                  "id": 3,
+                  "value": "pharmacy",
+                  "label": "Onboarding_BTN_Pharmacy"
+                },
+                {
+                  "id": 4,
+                  "value": "stores",
+                  "label": "Onboarding_BTN_Stores"
+                },
+                {
+                  "id": 5,
+                  "value": "liqueur",
+                  "label": "Onboarding_BTN_Liquor"
+                },
+                { "id": 6, "value": "pets", "label": "Onboarding_BTN_Pets" },
+                {
+                  "id": 7,
+                  "value": "convenience",
+                  "label": "Onboarding_BTN_Convenience"
+                },
+                {
+                  "id": 8,
+                  "value": "beauty",
+                  "label": "Onboarding_BTN_Beauty"
+                },
+                {
+                  "id": 9,
+                  "value": "services",
+                  "label": "Onboarding_BTN_Services"
+                }
+              ],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_SelectOpLbl" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 1,
+                "type": "select",
+                "name": "business_category",
+                "value": "",
+                "placeholder": "Onboarding_LB_BuissCat",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "id": 2,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_Identifier" }
+              ],
+              "container": {
+                "type": "card-grey",
+                "subtitle": "Onboarding_LB_IdentifierSubtitle"
+              },
+              "props": {
+                "id": 2,
+                "type": "text",
+                "name": "user",
+                "value": "",
+                "placeholder": "Onboarding_LB_BuisNameHint",
+                "helperText": "",
+                "maxLength": 10,
+                "nested": false,
+                "isChild": false
+              },
+              "column": true,
+              "lbltext": "Onboarding_LB_TigoMoneyLink"
+            },
+            {
+              "id": 3,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_AddDescription" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 3,
+                "type": "textarea",
+                "name": "business_description",
+                "value": "",
+                "placeholder": "Onboarding_LB_BuissnessDesc",
+                "maxLength": 100,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            }
+          ]
+        },
+        {
+          "type": "sales_channel",
+          "id": 2,
+          "title": "Onboarding_LB_SaleChannLbl",
+          "subtitle": "Onboarding_LB_ClientFind",
+          "editSubtitle": "Onboarding_LB_StoreAdd",
+          "errorMessage": "Onboarding_LB_ErrorSales",
+          "cards": [
+            {
+              "title": "Onboarding_LB_OnlineStoreLbl",
+              "description": "Onboarding_LB_WebSocialLbl",
+              "element": "shop_online",
+              "dynamicForm": false,
+              "child": true,
+              "active": false
+            },
+            {
+              "title": "Onboarding_LB_PhysicalStore",
+              "description": "Onboarding_LB_Establishment",
+              "element": "shop_physical",
+              "dynamicForm": true,
+              "child": false,
+              "active": false
+            }
+          ],
+          "fields": [
+            {
+              "subSection": "shop_physical",
+              "id": 20,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                {
+                  "type": "NOT_EMPTY",
+                  "err": "Onboarding_LB_StreetNumberTitle"
+                }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "text",
+                "name": "street_and_number",
+                "value": "",
+                "placeholder": "Onboarding_LB_StreetNumber",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "subSection": "shop_physical",
+              "id": 21,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_CityTitle" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "location_dropdown",
+                "name": "city",
+                "value": "",
+                "placeholder": "Onboarding_LB_City",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "subSection": "shop_physical",
+              "id": 22,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_StateTitle" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "text",
+                "name": "state",
+                "value": "",
+                "placeholder": "Onboarding_LB_State",
+                "maxLength": null,
+                "nested": true,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "subSection": "shop_physical",
+              "id": 23,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "checkbox": [],
+                "buttons": [],
+                "value": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_FavorIngresar" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "text",
+                "name": "post_code",
+                "value": "",
+                "placeholder": "Onboarding_LB_CP",
+                "maxLength": null,
+                "nested": true,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "subSection": "shop_physical",
+              "id": 24,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "checkbox": [],
+                "buttons": [],
+                "value": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_IngresRef" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "text",
+                "name": "reference",
+                "value": "",
+                "placeholder": "Onboarding_LB_RefLbl",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "subSection": "shop_physical",
+              "id": 24,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "headline",
+                "name": "time_head",
+                "value": "empty",
+                "placeholder": "Onboarding_LB_Horario",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "id": 32,
+              "subSection": "shop_physical",
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "Onboarding_LB_DiasHorario",
+                "error": "Onboarding_LB_ErrorFechas",
+                "days": [
+                  {
+                    "id": 0,
+                    "type": "Lunes",
+                    "text": "Onboarding_LB_MonLbl",
+                    "nested": false,
+                    "checked": false,
+                    "name": "monday"
+                  },
+                  {
+                    "id": 1,
+                    "type": "Martes",
+                    "text": "Onboarding_LB_TueLbl",
+                    "nested": false,
+                    "checked": false,
+                    "name": "tuesday"
+                  },
+                  {
+                    "id": 2,
+                    "type": "Miércoles",
+                    "text": "Onboarding_LB_WedLbl",
+                    "nested": false,
+                    "checked": false,
+                    "name": "wednesday"
+                  },
+                  {
+                    "id": 3,
+                    "type": "Jueves",
+                    "text": "Onboarding_LB_ThursLbl",
+                    "nested": false,
+                    "checked": false,
+                    "name": "thursday"
+                  },
+                  {
+                    "id": 4,
+                    "type": "Viernes",
+                    "text": "Onboarding_LB_FriLbl",
+                    "nested": false,
+                    "checked": false,
+                    "name": "friday"
+                  },
+                  {
+                    "id": 5,
+                    "type": "Sábado",
+                    "text": "Onboarding_LB_SatLbl",
+                    "nested": false,
+                    "checked": false,
+                    "name": "saturday"
+                  },
+                  {
+                    "id": 6,
+                    "type": "Domingo",
+                    "text": "Onboarding_LB_SunLbl",
+                    "nested": false,
+                    "checked": false,
+                    "name": "sunday"
+                  }
+                ],
+                "checkbox": [
+                  {
+                    "type": "open",
+                    "text": "Onboarding_LB_Open24H",
+                    "nested": true,
+                    "checked": false,
+                    "name": "open"
+                  },
+                  {
+                    "type": "closed",
+                    "text": "Onboarding_LB_ClosedLbl",
+                    "nested": true,
+                    "checked": false,
+                    "name": "closed"
+                  }
+                ],
+                "buttons": [
+                  {
+                    "title": "Onboarding_BTN_StartTime",
+                    "action": "addTimeStart",
+                    "nested": false
+                  },
+                  {
+                    "title": "Onboarding_BTN_CloseTime",
+                    "action": "addTimeEnd",
+                    "nested": false
+                  },
+                  {
+                    "title": "Onboarding_BTN_EditTime",
+                    "action": "editTime",
+                    "nested": false
+                  },
+                  {
+                    "title": "Onboarding_BTN_AddTime",
+                    "action": "addTime",
+                    "nested": false
+                  }
+                ]
+              },
+              "dataCheckbox": [
+                {
+                  "text": "Onboarding_LB_MonLbl",
+                  "name": "monday",
+                  "type": "",
+                  "nested": true,
+                  "checked": false
+                },
+                {
+                  "text": "Onboarding_LB_TueLbl",
+                  "name": "tuesday",
+                  "type": "",
+                  "nested": true,
+                  "checked": false
+                },
+                {
+                  "text": "Onboarding_LB_WedLbl",
+                  "name": "wednesday",
+                  "type": "",
+                  "nested": true,
+                  "checked": false
+                },
+                {
+                  "text": "Onboarding_LB_ThursLbl",
+                  "name": "thursday",
+                  "type": "",
+                  "nested": true,
+                  "checked": false
+                },
+                {
+                  "text": "Onboarding_LB_FriLbl",
+                  "name": "friday",
+                  "type": "",
+                  "nested": true,
+                  "checked": false
+                },
+                {
+                  "text": "Onboarding_LB_SatLbl",
+                  "name": "saturday",
+                  "type": "",
+                  "nested": true,
+                  "checked": false
+                },
+                {
+                  "text": "Onboarding_LB_SunLbl",
+                  "name": "sunday",
+                  "type": "",
+                  "nested": true,
+                  "checked": false
+                }
+              ],
+              "validations": [],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 6,
+                "type": "timesheet",
+                "name": "time_shop",
+                "value": [],
+                "placeholder": "Onboarding_LB_SelectDays",
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "id": 30,
+              "subSection": "shop_online",
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [
+                {
+                  "text": "Onboarding_LB_Website",
+                  "name": "website",
+                  "checked": false
+                },
+                {
+                  "text": "Onboarding_LB_Socials",
+                  "name": "social_media_ckb",
+                  "checked": false
+                }
+              ],
+              "validations": [
+                {
+                  "type": "NOT_EMPTY_CHECKBOX",
+                  "err": "Onboarding_LB_SelectOpLbl"
+                }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 6,
+                "type": "square_checkbox_child",
+                "name": "control_checkbox",
+                "value": "empty",
+                "placeholder": "",
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "subSection": "shop_online",
+              "id": 13,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_InsertSocials" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "text",
+                "name": "website",
+                "value": "",
+                "placeholder": "Onboarding_LB_Website",
+                "maxLength": null,
+                "nested": true,
+                "isChild": true
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "id": 21,
+              "subSection": "shop_online",
+              "data": [],
+              "dropdown": [
+                {
+                  "id": 0,
+                  "value": "",
+                  "label": "Canal de venta",
+                  "labelTextField": "",
+                  "name": ""
+                },
+                {
+                  "id": 1,
+                  "name": "facebook",
+                  "label": "Facebook",
+                  "labelTextField": "Link de Facebook",
+                  "value": ""
+                },
+                {
+                  "id": 2,
+                  "name": "instagram",
+                  "label": "Instagram",
+                  "labelTextField": "Usuario de Instagram",
+                  "value": ""
+                },
+                {
+                  "id": 3,
+                  "name": "twitter",
+                  "label": "Twitter",
+                  "labelTextField": "Usuario de Twitter",
+                  "value": ""
+                }
+              ],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_SelectOpLbl" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "static_dropdown",
+                "name": "social_media_ckb",
+                "labelButton": "Onboarding_LB_ErrorSelectOpLbl",
+                "value": {},
+                "placeholder": "Onboarding_LB_SaleChannLbl",
+                "maxLength": null,
+                "nested": false,
+                "isChild": true
+              },
+              "column": false,
+              "lbltext": ""
+            }
+          ]
+        },
+        {
+          "type": "contact",
+          "id": 2,
+          "title": "Onboarding_LB_ContactInfo",
+          "cards": [],
+          "subtitle": "Onboarding_LB_ContactInfoTitle",
+          "editSubtitle": "Onboarding_LB_PhoneEmail",
+          "fields": [
+            {
+              "id": 14,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_PhoneTitle" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 2,
+                "type": "telephone",
+                "name": "phone",
+                "value": "",
+                "placeholder": "Onboarding_LB_Phone",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "id": 15,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_AddEmail" },
+                { "type": "EMAIL", "err": "Onboarding_LB_ErrorAddEmail" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 5,
+                "type": "email",
+                "name": "email",
+                "value": "",
+                "placeholder": "Onboarding_LB_Email",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "id": 20,
+              "data": [],
+              "dropdown": [],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "headline",
+                "name": "",
+                "value": "empty",
+                "placeholder": "Onboarding_LB_SocialsContactLbl",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            },
+            {
+              "id": 21,
+              "data": [],
+              "dropdown": [
+                {
+                  "id": 0,
+                  "name": "",
+                  "label": "Red Social",
+                  "labelTextField": "",
+                  "value": ""
+                },
+                {
+                  "id": 1,
+                  "name": "facebook",
+                  "label": "Facebook",
+                  "labelTextField": "Link de Facebook",
+                  "value": ""
+                },
+                {
+                  "id": 2,
+                  "name": "instagram",
+                  "label": "Instagram",
+                  "labelTextField": "Usuario de Instagram",
+                  "value": ""
+                },
+                {
+                  "id": 3,
+                  "name": "twitter",
+                  "label": "Twitter",
+                  "labelTextField": "Usuario de Twitter",
+                  "value": ""
+                }
+              ],
+              "timesheet": {
+                "title": "",
+                "error": "",
+                "days": [],
+                "value": [],
+                "checkbox": [],
+                "buttons": []
+              },
+              "dataCheckbox": [],
+              "validations": [
+                { "type": "NOT_EMPTY", "err": "Onboarding_LB_SelectOpLbl" }
+              ],
+              "container": { "type": "", "subtitle": "" },
+              "props": {
+                "id": 0,
+                "type": "dynamic_dropdown",
+                "name": "social_network",
+                "labelButton": "Onboarding_LB_AddSocials",
+                "value": [],
+                "placeholder": "Onboarding_LB_RedSocialLbl",
+                "maxLength": null,
+                "nested": false,
+                "isChild": false
+              },
+              "column": false,
+              "lbltext": ""
+            }
+          ]
+        },
+        {
+          "type": "profile_create",
+          "id": 4,
+          "title": "Onboarding_LB_ProfileBannPicSubtitle",
+          "subtitle": "Onboarding_LB_ProfileBannPicTitle",
+          "editSubtitle": "Onboarding_LB_ProfileBannPicSubtitle1",
+          "fields": [],
+          "cards": []
+        }
+      ],
+      "finalScreen": [
+        {
+          "type": "final_validation",
+          "id": 5,
+          "title": "¡Proceso finalizado!",
+          "subtitle": "¡Pronto podrás disfrutar de tu nuevo Perfil de negocio!",
+          "text1": "Nos encontramos validando tu información brindada para aprobar tu nuevo perfil.",
+          "text2": "Este proceso toma alrededor de 24 horas.",
+          "text3": "Te sugerimos que después de este tiempo regreses a tu perfil.",
+          "text4": "No te preocupes, mientras trabajamos en ello podrás seguir utilizando tu wallet."
+        }
+      ]
+    }
+  ]
+}
